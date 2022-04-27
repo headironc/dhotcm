@@ -1,0 +1,53 @@
+@import "../../mixins/shadow";
+@import "../../mixins/hairline";
+
+.head-card {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+
+  padding: 30px 20px;
+
+  border-radius: 10px;
+  background-color: #fff;
+  @include box-shadow();
+
+  .avatar-box {
+    flex: 0 0 160px;
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    @include hairline-surround();
+
+    .avatar {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .user-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+
+    .username {
+      font-size: 14Px;
+    }
+
+    .phone-number {
+      font-size: 12Px;
+      color: #616161;
+    }
+  }
+}
+
+.user-center-lists {
+  margin-top: 20px;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  @include box-shadow();
+}

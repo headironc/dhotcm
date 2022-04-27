@@ -1,0 +1,40 @@
+$color-border-light: #ebedf0;
+
+@mixin hairline(
+  $color: $color-border-light,
+  $style: solid,
+  $width: 1PX
+) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    transform-origin: center;
+    box-sizing: border-box;
+    pointer-events: none;
+    border: 0 $style $color;
+    transform: scaleY(0.5);
+  }
+}
+
+@mixin hairline-bottom($left:0, $right:0,$width: 1PX) {
+  @include hairline();
+
+  &::after {
+    left: $left;
+    right: $right;
+    bottom: 0;
+    border-bottom-width: $width;
+  }
+}
+
+@mixin hairline-surround($width: 1PX) {
+  @include hairline();
+  overflow: hidden;
+
+  &::after {
+    border-width: $width;
+    border-radius: 6PX;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../mixins/hairline";
+
+.form-line {
+  padding: 24px 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+
+  @include hairline-bottom(32px, 32px);
+
+  &-label {
+    flex: 0 0 120px;
+    width: 120px;
+
+    font-size: 28px;
+  }
+
+  .form-input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 8px 0;
+
+    .form-input {
+      font-size: 26px;
+    }
+
+    .input-message {
+      color: #FA5151;
+      font-size: 22px;
+    }
+  }
+}
+
+.placeholder-class {
+  font-size: 24px;
+}

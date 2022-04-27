@@ -1,0 +1,37 @@
+@import "../../mixins/hairline";
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 20px;
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+
+    .cell-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .cell-text {
+      font-size: 24px;
+    }
+  }
+
+  &-right {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:not(:last-child) {
+    @include hairline-bottom(20px, 20px);
+  }
+}
+
+.cell-hover {
+  background-color: #F5F5F5;
+}

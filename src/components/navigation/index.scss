@@ -1,0 +1,35 @@
+@import "../../mixins/hairline";
+
+.navigation {
+  height: 40Px;
+  padding: 4Px 6Px;
+
+  display: grid;
+  grid-template-columns: 87Px 1fr 87Px;
+  gap: 0 6Px;
+
+  @include hairline-bottom();
+}
+
+.title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+.icon-box {
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 28Px;
+    height: 28Px;
+  }
+}
+
